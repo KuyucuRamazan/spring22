@@ -1,0 +1,33 @@
+package day13;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Day13Arrays02 {
+    public static void main(String[] args) {
+        //Create a String array by getting elements from user
+        //Type code to put elements in alphabetical order
+        //Type code to print the total number of characters in the first and the last String
+
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the capacity of array");
+        int length= input.nextInt();
+        String[] arr=new String[length];
+        System.out.println(Arrays.toString(arr));
+
+        for(int i=0; i<length;i++){
+    System.out.println("Enter the element of the array in the index of "+i);
+    arr[i]=input.next();
+
+
+}
+
+
+        //sort() method puts the string elements in alphabetical order
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        int numOfCharInFirstElement = arr[0].length();
+        int numOfCharInLastElement =arr[arr.length-1].length();
+        System.out.println("total number of character: "+(numOfCharInFirstElement+numOfCharInLastElement));
+    }
+}
